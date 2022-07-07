@@ -9,11 +9,6 @@ export const handler = async (event, context) => {
       password: "!@Desafio123#$"
     })
 
-    const nome = "Pikachuchu"
-    const geracao = 1
-    const ataque = 99
-    const tipoPokemon = "Elétrico"
-
     const [rows, fields] = await connection.execute('SELECT * FROM u157627371_desavio.pokemons')
     return JSON.stringify(rows);
   } catch (error) {

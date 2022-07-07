@@ -1,5 +1,5 @@
 import mysql from "mysql2/promise";
-
+import dbconfig from "../../../src"
 export const handler = async (event, context) => {
   try {
     const connection = await mysql.createConnection({
