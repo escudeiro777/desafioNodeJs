@@ -1,0 +1,21 @@
+list-pokemon:
+  handler: src/functions/pokemon/list.handler
+  name: ${self:custom.dotenv.API_NAME}-list-pokemon
+  description: Função para listar Pokemons
+  memorySize: 128
+  events:
+    - http:
+        path: /pokemon
+        method: get
+        cors: true
+
+create-pokemon:
+  handler: src/functions/pokemon/create.handler
+  name: ${self:custom.dotenv.API_NAME}-create-pokemon
+  description: Função para criar Pokemons
+  memorySize: 128
+  events:
+    - http:
+        path: /pokemon/create
+        method: get
+        cors: true
