@@ -10,7 +10,7 @@ export const handler = async (event, context) => {
     })
 
 
-    const [rows, fields] = await connection.execute('DELETE pokemons FROM u157627371_desavio.pokemons WHERE nome = Pikachu ')
+    const [rows, fields] = await connection.execute('DELETE pokemons WHERE id = ?')
     return JSON.stringify(rows);
   } catch (error) {
     return error.message;

@@ -9,8 +9,8 @@ export const handler = async (event, context) => {
       password: "!@Desafio123#$"
     })
 
-    const [rows, fields] = await connection.execute('SELECT * FROM u157627371_desavio.pokemons')
-    return JSON.stringify(rows);
+     const [rows, fields] = await connection.execute('SELECT * FROM u157627371_desavio.pokemons')
+      return JSON.stringify(rows);
   } catch (error) {
     return error.message;
   }
