@@ -8,20 +8,29 @@ export const handler = async (event, context) => {
       password: "!@Desafio123#$"
     })
 
-    
+    const nome = "nayara"
+    const geracao = "25"
+    const ataque = "14"
+    const tipoPokemon = "doente"
 
-     const  [rows, fields] = await connection.execute(`INSERT INTO u157627371_desavio.pokemons
-      // (
-      //   nome,
-      //   geracao,
-      //   ataque,
-      //   tipoPokemon)
-      // VALUES
-      // (
-      // '${nome}',
-      //  ${geracao},
-      //  ${ataque},
-      // '${tipoPokemon}');`)
+
+
+    //  const  [rows, fields] = await connection.execute(`INSERT INTO pokemons(nome,geracao,ataque,tipoPokemon) VALUES(?,?,?,?);`)
+    //  const values = [pokemons.nome, pokemons.geracao, pokemons.ataque, pokemons.tipoPokemon]
+    // return statuscode = "200";
+
+     const  [rows, fields] = await connection.execute(`INSERT INTO pokemons
+      (
+      nome,
+      geracao,
+      ataque,
+      tipoPokemon)
+      VALUES
+      (
+      '${nome}',
+      ${geracao},
+      ${ataque},
+      '${tipoPokemon}');`)
       return JSON.stringify(rows);
     
   

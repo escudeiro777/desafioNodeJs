@@ -21,24 +21,24 @@ create-pokemon:
         cors: true
 
 
-# update-pokemon:
-#   handler: src/functions/pokemon/update.handler
-#   name: ${self:custom.dotenv.API_NAME}-update-pokemon
-#   description: Função para atualizar Pokemons
-#   memorySize: 128
-#   events:
-#     - http:
-#         path: /pokemon/update/{id}
-#         method: put
-#         cors: true      
+update-pokemon:
+  handler: src/functions/pokemon/update.handler
+  name: ${self:custom.dotenv.API_NAME}-update-pokemon
+  description: Função para atualizar Pokemons
+  memorySize: 128
+  events:
+    - http:
+        path: /pokemon/update
+        method: put
+        cors: true      
 
-# delete-pokemon:
-#   handler: src/functions/pokemon/delete.handler
-#   name: ${self:custom.dotenv.API_NAME}-delete-pokemon
-#   description: Função para deletar um pokemon
-#   memorySize: 128
-#   events:
-#     - http:
-#         path: /pokemon/delete/{id}
-#         method: delete
-#         cors: true        
+delete-pokemon:
+  handler: src/functions/pokemon/delete.handler
+  name: ${self:custom.dotenv.API_NAME}-delete-pokemon
+  description: Função para deletar um pokemon
+  memorySize: 128
+  events:
+    - http:
+        path: /pokemon/delete
+        method: delete
+        cors: true        
